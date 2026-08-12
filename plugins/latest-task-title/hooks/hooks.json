@@ -1,5 +1,5 @@
 {
-  "description": "Refresh the current Codex task title for each root user prompt.",
+  "description": "Refresh task titles while preserving manually chosen titles.",
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -9,12 +9,24 @@
             "command": "python3 \"${PLUGIN_ROOT}/scripts/latest_task_title.py\"",
             "commandWindows": "py -3 \"%PLUGIN_ROOT%\\scripts\\latest_task_title.py\"",
             "timeout": 3,
-            "statusMessage": "Refreshing task title",
+            "statusMessage": "Checking and refreshing task title",
             "additionalContextLimit": 700
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${PLUGIN_ROOT}/scripts/latest_task_title.py\"",
+            "commandWindows": "py -3 \"%PLUGIN_ROOT%\\scripts\\latest_task_title.py\"",
+            "timeout": 3,
+            "statusMessage": "Remembering automatic task title"
           }
         ]
       }
     ]
   }
 }
-

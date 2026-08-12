@@ -1,7 +1,7 @@
 {
   "name": "latest-task-title",
-  "version": "0.1.0",
-  "description": "Keep Codex sidebar task titles aligned with the latest user request.",
+  "version": "0.2.0",
+  "description": "Keep task titles current without overwriting manually chosen titles.",
   "author": {
     "name": "Deep-Octopus",
     "url": "https://github.com/Deep-Octopus"
@@ -18,8 +18,8 @@
   ],
   "interface": {
     "displayName": "Latest Task Title",
-    "shortDescription": "Refresh task titles from the latest request.",
-    "longDescription": "Uses a UserPromptSubmit lifecycle hook and Codex's host-provided title tool to keep local sidebar task names aligned with the latest user request.",
+    "shortDescription": "Refresh titles until you rename one manually.",
+    "longDescription": "Keeps local sidebar task names aligned with the latest request, then permanently stops automatic updates after a manual rename is detected.",
     "developerName": "Deep-Octopus",
     "category": "Productivity",
     "capabilities": [
@@ -31,4 +31,3 @@
     ]
   }
 }
-
