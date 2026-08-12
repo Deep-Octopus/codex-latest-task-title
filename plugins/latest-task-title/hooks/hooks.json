@@ -1,0 +1,20 @@
+{
+  "description": "Refresh the current Codex task title for each root user prompt.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"${PLUGIN_ROOT}/scripts/latest_task_title.py\"",
+            "commandWindows": "py -3 \"%PLUGIN_ROOT%\\scripts\\latest_task_title.py\"",
+            "timeout": 3,
+            "statusMessage": "Refreshing task title",
+            "additionalContextLimit": 700
+          }
+        ]
+      }
+    ]
+  }
+}
+

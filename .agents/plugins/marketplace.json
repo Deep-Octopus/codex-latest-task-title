@@ -1,0 +1,21 @@
+{
+  "name": "deep-octopus-plugins",
+  "interface": {
+    "displayName": "Deep Octopus Plugins"
+  },
+  "plugins": [
+    {
+      "name": "latest-task-title",
+      "source": {
+        "source": "local",
+        "path": "./plugins/latest-task-title"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
+
